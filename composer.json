@@ -17,7 +17,7 @@
         "drupal/core-recommended": "^8.8",
         "drupal/webform": "^6.0",
         "drush-ops/behat-drush-endpoint": "^9.3",
-        "drush/drush": "^10.5",
+        "drush/drush": "^8.4.5",
         "pantheon-systems/drupal-integrations": "^8",
         "pantheon-systems/quicksilver-pushback": "^2"
     },
