@@ -1,0 +1,9 @@
+uuid: 6cf56c8e-cefb-4f71-900b-85446ef4da22
+langcode: en
+status: true
+dependencies: {  }
+id: copropriete
+label: Copropriété
+category: ''
+likert: false
+options: "'immeuble isole': 'Immeuble Isolé'\n'groupe d''habitation': 'Groupe d''habitation'"

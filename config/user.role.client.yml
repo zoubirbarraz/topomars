@@ -1,0 +1,12 @@
+uuid: 956c61d5-9376-439d-8306-efdd4cb1c851
+langcode: en
+status: true
+dependencies: {  }
+id: client
+label: Client
+weight: 3
+is_admin: null
+permissions:
+  - 'access comments'
+  - 'access webform submission user'
+  - 'edit own comments'

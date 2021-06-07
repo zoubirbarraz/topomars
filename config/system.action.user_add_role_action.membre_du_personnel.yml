@@ -1,0 +1,14 @@
+uuid: 86afac51-a2db-4bdc-8f65-fa50e3fe5d7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.membre_du_personnel
+  module:
+    - user
+id: user_add_role_action.membre_du_personnel
+label: 'Add the Membre du personnel role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: membre_du_personnel

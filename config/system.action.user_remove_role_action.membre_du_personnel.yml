@@ -1,0 +1,14 @@
+uuid: 6c947040-ceca-4905-8317-b2fdf781c262
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.membre_du_personnel
+  module:
+    - user
+id: user_remove_role_action.membre_du_personnel
+label: 'Remove the Membre du personnel role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: membre_du_personnel

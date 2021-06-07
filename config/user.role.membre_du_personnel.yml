@@ -1,0 +1,9 @@
+uuid: 686ccb9f-254a-4a66-8274-f55c6e91e7e3
+langcode: en
+status: true
+dependencies: {  }
+id: membre_du_personnel
+label: 'Membre du personnel'
+weight: 4
+is_admin: null
+permissions: {  }

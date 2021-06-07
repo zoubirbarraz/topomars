@@ -1,0 +1,17 @@
+uuid: 89df7ffe-5a71-477e-b4d9-a97f8541f646
+langcode: en
+status: true
+dependencies: {  }
+id: directeur
+label: Directeur
+weight: 5
+is_admin: null
+permissions:
+  - 'use editorial transition archived_draft'
+  - 'use editorial transition archived_published'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use projets transition create_new_draft'
+  - 'use projets transition publish'
+  - 'view any unpublished content'
+  - 'view latest version'

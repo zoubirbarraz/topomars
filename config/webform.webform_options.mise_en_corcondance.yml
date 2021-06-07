@@ -1,0 +1,9 @@
+uuid: a54735d6-8500-4893-a3d3-4fdd397a6938
+langcode: en
+status: true
+dependencies: {  }
+id: mise_en_corcondance
+label: 'Mise en corcondance'
+category: ''
+likert: false
+options: "immeuble: Immeuble\nvilla: Villa"

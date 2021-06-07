@@ -1,0 +1,199 @@
+uuid: 7f55283d-5cd9-4a3a-a765-a47e34036924
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: simulateur
+title: simulateur
+description: ''
+category: ''
+elements: "type_de_prestation:\n  '#type': webform_wizard_page\n  '#title': 'Type de prestation'\n  nom_du_projet:\n    '#type': textfield\n    '#title': 'Nom du  projet'\n    '#required': true\n  prestation:\n    '#type': radios\n    '#title': Prestation\n    '#options': prestations\n    '#options_display': buttons\n    '#required': true\ndesignation_du_projet:\n  '#type': webform_wizard_page\n  '#title': 'Designation du projet'\n  travaux_cadastraux:\n    '#type': radios\n    '#title': 'Travaux Cadastraux'\n    '#options': travaux_cadastraux\n    '#options_display': buttons\n    '#required': true\n    '#states':\n      visible:\n        ':input[name=\"prestation\"]':\n          value: 'travaux cadastaux'\n  topographie_generale:\n    '#type': radios\n    '#title': 'Topographie Générale'\n    '#options': topographie_generale\n    '#options_display': buttons\n    '#required': true\n    '#states':\n      visible:\n        ':input[name=\"prestation\"]':\n          value: 'topographie generale'\n  photogrammetrie:\n    '#type': radios\n    '#title': Photogrammétrie\n    '#options': photogrammetrie\n    '#options_display': buttons\n    '#required': true\n    '#states':\n      visible:\n        ':input[name=\"prestation\"]':\n          value: photogrammetrie\n  sig:\n    '#type': radios\n    '#title': SIG\n    '#options': sig\n    '#options_display': buttons\n    '#required': true\n    '#states':\n      visible:\n        ':input[name=\"prestation\"]':\n          value: sig\nconsistance_general:\n  '#type': webform_wizard_page\n  '#title': 'Consistance général'\n  '#states':\n    invisible:\n      - ':input[name=\"travaux_cadastraux\"]':\n          value: lotissement\n      - or\n      - ':input[name=\"travaux_cadastraux\"]':\n          value: morcellement\n      - or\n      - ':input[name=\"travaux_cadastraux\"]':\n          value: fusion\n      - or\n      - ':input[name=\"topographie_generale\"]':\n          value: 'plan de situation'\n      - or\n      - ':input[name=\"topographie_generale\"]':\n          value: 'projet de pharmacie'\n      - or\n      - ':input[name=\"topographie_generale\"]':\n          value: 'projet debits-tabacs'\n      - or\n      - ':input[name=\"topographie_generale\"]':\n          value: 'projet auto-ecole'\n      - or\n      - ':input[name=\"prestation\"]':\n          value: photogrammetrie\n      - or\n      - ':input[name=\"prestation\"]':\n          value: sig\n  mise_en_corcondance:\n    '#type': radios\n    '#title': 'Mise en corcondance'\n    '#options': mise_en_corcondance\n    '#options_display': buttons\n    '#required': true\n    '#states':\n      visible:\n        ':input[name=\"travaux_cadastraux\"]':\n          value: 'mise en corcondance'\n  copropriete:\n    '#type': radios\n    '#title': Copropriété\n    '#options': copropriete\n    '#options_display': buttons\n    '#required': true\n    '#states':\n      visible:\n        ':input[name=\"travaux_cadastraux\"]':\n          value: copropriete\n  plan_cote:\n    '#type': radios\n    '#title': 'Plan Côté'\n    '#options': plan_cote\n    '#options_display': buttons\n    '#required': true\n    '#states':\n      visible:\n        ':input[name=\"topographie_generale\"]':\n          value: 'plan cote'\n  retablissement_de_borne:\n    '#type': radios\n    '#title': 'Rétablissement de borne'\n    '#options': retablissement_de_borne\n    '#options_display': buttons\n    '#required': true\n    '#states':\n      visible:\n        ':input[name=\"topographie_generale\"]':\n          value: 'retablissement de borne'\nspecifications:\n  '#type': webform_wizard_page\n  '#title': Spécifications\n  '#states':\n    invisible:\n      - ':input[name=\"prestation\"]':\n          value: photogrammetrie\n      - xor\n      - ':input[name=\"prestation\"]':\n          value: sig\n  superficie_en_ha:\n    '#type': number\n    '#title': 'Superficie en ha'\n    '#required': true\n    '#states':\n      visible:\n        - ':input[name=\"travaux_cadastraux\"]':\n            value: lotissement\n        - or\n        - ':input[name=\"travaux_cadastraux\"]':\n            value: morcellement\n        - or\n        - ':input[name=\"travaux_cadastraux\"]':\n            value: fusion\n        - or\n        - ':input[name=\"topographie_generale\"]':\n            value: 'plan de situation'\n        - or\n        - ':input[name=\"topographie_generale\"]':\n            value: 'plan cote'\n  nombre_de_points:\n    '#type': radios\n    '#title': 'Nombre de points'\n    '#options': nombre_de_points\n    '#options_display': buttons\n    '#required': true\n    '#states':\n      visible:\n        ':input[name=\"retablissement_de_borne\"]':\n          checked: true\n  nombre_de_fractions:\n    '#type': radios\n    '#title': 'Nombre de Fractions'\n    '#options': nombre_de_fractions\n    '#options_display': buttons\n    '#required': true\n    '#states':\n      visible:\n        ':input[name=\"travaux_cadastraux\"]':\n          value: copropriete\ncontact_info:\n  '#type': webform_wizard_page\n  '#title': 'Contact info'\n  nom_complet:\n    '#type': webform_flexbox\n    nom:\n      '#type': textfield\n      '#title': Nom\n      '#required': true\n    prenom:\n      '#type': textfield\n      '#title': Prénom\n      '#required': true\n  telephone:\n    '#type': tel\n    '#title': Téléphone\n    '#required': true\n    '#international': true\n    '#international_initial_country': MA\n    '#international_preferred_countries':\n      - MA\n  email:\n    '#type': webform_email_confirm\n    '#title': Email\n    '#required': true\n    '#confirm__title': 'Confirmer votre Email'\n  autre_descriptions_pour_le_projet:\n    '#type': textarea\n    '#title': 'Autre descriptions pour le projet'\n    '#required': true\npaiement_rendez_vous:\n  '#type': webform_wizard_page\n  '#title': Paiement/rendez-vous\n  mode:\n    '#type': radios\n    '#title': Mode\n    '#options':\n      'paiement en ligne': 'Paiement en ligne'\n      'fixer un rendez vous': 'Fixer un Rendez-Vous'\n    '#options_display': two_columns\n    '#required': true\n  modalite_de_paiement:\n    '#type': radios\n    '#title': 'Modalité de paiement'\n    '#options':\n      'par carte': 'Par carte'\n      'Par virement': 'Par virement'\n    '#options_display': two_columns\n    '#required': true\n    '#states':\n      visible:\n        ':input[name=\"mode\"]':\n          value: 'paiement en ligne'"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns:
+    - serial
+    - element__nom_du_projet
+    - element__prestation
+    - created
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: authenticated
+  draft_multiple: true
+  draft_auto_save: true
+  draft_saved_message: "Votre choix sont sauvegard&eacute;s automatiquement et vous pouvez completer le remplissage du formulaire s&#39;il y avait une interruption.<br />\r\nN.B: ces valeurs sauvegard&eacute;es sont supprim&eacute;es dans 3 jours."
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: draft
+  purge_days: 3
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

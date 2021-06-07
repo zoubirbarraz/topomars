@@ -1,0 +1,9 @@
+uuid: d3362b7f-6e7a-4d91-99f9-85df8a8933da
+langcode: en
+status: true
+dependencies: {  }
+id: nombre_de_points
+label: 'Nombre de points'
+category: ''
+likert: false
+options: "1: '1'\n'entre 2 et 5': 'Entre 2 et 4'\n'entre 5 et 6': 'Entre 5 et 6'\n'superieur 7': 'Superieur 7'"

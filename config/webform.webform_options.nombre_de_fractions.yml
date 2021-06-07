@@ -1,0 +1,9 @@
+uuid: a077ccdf-5251-4104-a529-f0a598e561e9
+langcode: en
+status: true
+dependencies: {  }
+id: nombre_de_fractions
+label: 'Nombre de fractions'
+category: ''
+likert: false
+options: "'entre a et b': 'entre a et b'\n'entre b et c': 'entre b et c'\n'entre c et d': 'entre c et d'"

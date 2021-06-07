@@ -1,0 +1,14 @@
+uuid: 0a6201e7-ba1c-4f66-b26a-d1ba4fdaa4cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.directeur
+  module:
+    - user
+id: user_add_role_action.directeur
+label: 'Add the Directeur role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: directeur

@@ -1,0 +1,9 @@
+uuid: e45b28db-fe01-4e44-a794-8ff911556027
+langcode: en
+status: true
+dependencies: {  }
+id: retablissement_de_borne
+label: 'Rétablissement de borne'
+category: ''
+likert: false
+options: "urbain: Urbain\nrural: Rural"

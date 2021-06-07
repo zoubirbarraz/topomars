@@ -1,0 +1,9 @@
+uuid: 981f5857-d335-42e8-9fbf-49e2e6518f24
+langcode: en
+status: true
+dependencies: {  }
+id: plan_cote
+label: 'plan côté'
+category: ''
+likert: false
+options: "'terrain nu faible': 'Terrain Nu (détails faible)'\n'terrain nu eleve': 'Terrain Nu (détails élevé)'\n'projet lineaire': 'Projet linéaire'"

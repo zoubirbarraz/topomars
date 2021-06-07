@@ -1,0 +1,48 @@
+uuid: 2146a3c4-a794-4f7a-b725-9b1ad0a84321
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.projets.field_client
+    - field.field.node.projets.field_date_du_debut
+    - field.field.node.projets.field_nom_du_projet
+    - node.type.projets
+  module:
+    - datetime
+    - text
+    - user
+id: node.projets.default
+targetEntityType: node
+bundle: projets
+mode: default
+content:
+  field_client:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date_du_debut:
+    weight: 104
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_nom_du_projet:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

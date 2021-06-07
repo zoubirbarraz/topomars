@@ -1,0 +1,28 @@
+uuid: fa5deeb1-6d70-4722-8f5c-d2bf27bf55bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_client
+    - node.type.projets
+id: node.projets.field_client
+field_name: field_client
+entity_type: node
+bundle: projets
+label: Client
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

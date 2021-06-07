@@ -1,0 +1,18 @@
+uuid: 28eede4d-496f-48dc-a97c-df7a354827e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: projets
+type: projets
+description: 'Ce type contient les differents projets créés '
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

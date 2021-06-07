@@ -1,0 +1,21 @@
+uuid: 3e8608a6-ec53-422c-91f0-3b04b9cc7fa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nom_du_projet
+    - node.type.projets
+  module:
+    - text
+id: node.projets.field_nom_du_projet
+field_name: field_nom_du_projet
+entity_type: node
+bundle: projets
+label: 'nom du projet'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

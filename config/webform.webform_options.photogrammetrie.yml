@@ -1,0 +1,9 @@
+uuid: 6eb4ec27-28ed-49a3-913c-3e1a26a65210
+langcode: en
+status: true
+dependencies: {  }
+id: photogrammetrie
+label: Photogrammétrie
+category: ''
+likert: false
+options: "'calcul de volume': 'Calcul de Volume'\n'prise de vue': 'prise de vue'\n'division en volumes': 'Division en volumes'"

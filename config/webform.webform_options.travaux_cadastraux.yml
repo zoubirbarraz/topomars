@@ -1,0 +1,9 @@
+uuid: 0c4601c4-e296-4a86-b041-9a54b4a87be3
+langcode: en
+status: true
+dependencies: {  }
+id: travaux_cadastraux
+label: 'Travaux Cadastraux'
+category: ''
+likert: false
+options: "'mise en corcondance': 'Mise En Corcondance'\ncopropriete: Copropriété\nlotissement: Lotissement\nmorcellement: Morcellement\nfusion: Fusion"

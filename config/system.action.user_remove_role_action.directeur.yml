@@ -1,0 +1,14 @@
+uuid: 04dc892f-f381-49de-af54-18f69d54bf98
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.directeur
+  module:
+    - user
+id: user_remove_role_action.directeur
+label: 'Remove the Directeur role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: directeur
